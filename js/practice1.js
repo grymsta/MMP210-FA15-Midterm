@@ -12,11 +12,18 @@ function setup () {
 
     //setup square1
     square1 = {x:25, y:25, fill:'red', stroke:'black'};
-    square2 = {x:75, y:25, fill:'black', stroke:'red'};
+    square2 = {x:75, y:25, fill:'black', stroke:'black'};
     square3 = {x:150, y:25, fill:'blue', stroke:'black'};
+    square4 = {x:201, y:25, fill:'yellow', stroke:'black'};
+    sqaure5 = {x:275, y:25, fill:'limegreen', stroke:'black'};
+    square6 = {x:326, y:25, fill:'orange', stroke:'black'};
+
     drawSquare(square1);
     drawSquare(square2);
     drawSquare(square3);
+    drawSquare(square4);
+    //drawSquare(sqaure5);
+    //drawSquare(square6);
 
 //    drawSquare1(25, 25);
 //    drawSquare2(76, 25);
@@ -83,68 +90,22 @@ function drawSquare1(startX, startY){
     rect(startX, startY, 50, 50);
 }
 
-function drawSquare2(startX, startY){
-
-    color1 = fill('black');
-    color2 = stroke('black');
-    rect(startX, startY, 50, 50);
-}
-
-function drawSquare3(startX, startY){
-
-    color1 = fill('blue');
-    color2 = stroke('black');
-    rect(startX, startY, 50, 50);
-}
-
-function drawSquare4(startX, startY){
-
-    color1 = fill('yellow');
-    color2 = stroke('black');
-    rect(startX, startY, 50, 50);
-}
-
-function drawSquare5(startX, startY){
-
-    color1 = fill('limegreen');
-    color2 = stroke('black');
-    rect(startX, startY, 50, 50);
-}
-
-function drawSquare6(startX, startY){
-
-    color1 = fill('orange');
-    color2 = stroke('black');
-    rect(startX, startY, 50, 50);
-}
 
 
 
 function mousePressed() {
-//
-var d = dist(mouseX, mouseY, square1.x+25, square1.y+25);
-    if(d > 25){
+
+var d = dist(mouseX, mouseY, square1.x, square1.y);
+    if(d > 25 && d < 150){
         sqColor = color('black');
         cirColor = color('red');
     }
 
-    var d = dist(mouseX, mouseY, square2.x+25, square2.y+25);
-    if(d > 25){
-       sqColor = color('black');
-        cirColor = color('red');
-    }
-
-    ////======
-    d = dist(mouseX, mouseY, square1.x+25, square1.y+25);
-    if(d > 25){
-        sqColor = color('black');
-        cirColor = color('red');
-    }
-
-    var d = dist(mouseX, mouseY, square2.x+25, square2.y+25);
-    if(d > 25){
-       sqColor = color('black');
-        cirColor = color('red');
+    //======
+    d = dist(mouseX, mouseY, square3.x, square3.y);
+    if(d > 150 && d < 200){
+        sqColor = color('yellow');
+        cirColor = color('blue');
     }
 
 
